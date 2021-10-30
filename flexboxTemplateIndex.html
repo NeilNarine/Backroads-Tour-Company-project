@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .container {
+        display: flex; /*this is a block element so will span the full screen*/
+        /* display: inline-flex;*/ /*this is an inline element */
+
+        /* FLEX DIRECTION 4 options*/
+        flex-direction: row; /*default*/
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* FLEXWRAP 3 options*/
+        /* flex-wrap: nowrap; */ /*default*/
+        flex-wrap: wrap;
+        /* flex-wrap: wrap-reverse; */
+
+        /* JUSTIFY-CONTENT HORIZONTAL ALIGNMENT 6 options*/
+        /* notes:flex-start(default), flex-end, center*/
+        /* notes:evenly distributed */
+        /* notes:space-between first item start last end */
+        /* notes:space-around side margins */
+        /* notes:space-evenly even margins */
+        /* justify-content: flex-start; */
+        /* justify-content: flex-end; */
+        /* justify-content: center; */
+        justify-content: space-between;
+        /* justify-content: space-around; */
+        /* justify-content: space-evenly; */
+
+        /* ALIGN-ITEMS VERTICAL ALIGNMENT 5 options*/
+        /* just needed to demonstrate the align item need some height to the box */
+        height: 40vh;
+        display: flex;
+
+        /* notes:stretch (default), flex-start, flex-end, center, baseline */
+        align-items: stretch;
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /*align-items: baseline;*/ /*aligns the bottom of the text character instead of the box.  Good for logo to be in line with links in a navbar*/
+
+        /* ALIGN-CONTENT */
+        /* stretch(default), flex-start, flex-end, space-around, space-between, center */
+        /* align-content: stretch; */
+        /* align-content: flex-start; */
+        /* align-content: flex-end; */
+        /* align-content: space-around; */
+        /* align-content: space-between; */
+        align-content: center;
+
+        /* FLEX BASIS */
+        /* base value and flex shortcut */
+      }
+      .box {
+        flex: 0 0 calc(20% - 1rem); /*first figure is flex-grow then flex-shrink then size*/
+      }
+    </style>
+  </head>
+  <body>
+    <!--  parent = flex-container-->
+    <div class="container">
+      <!-- children = flex-items -->
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
+      <div class="box box-5">5</div>
+      <!-- <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div>
+      <div class="box generic">G</div> -->
+      <!-- end of children = flex-items -->
+    </div>
+    <!-- <a href="banner.html">banner html</a> -->
+    <!--  end of parent = flex-container-->
+  </body>
+</html>
